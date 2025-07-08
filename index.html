@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayNow Scam Awareness - Singapore</title>
+    
+    <!-- External CSS links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <style>
+        /* Footer Styling */
+.footer {
+    background-color: #333; /* Dark background color */
+    color: white;           /* White text color */
+    text-align: center;     /* Center the text */
+    padding: 15px 0;        /* Add some padding to the footer */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 18px; 
+  text-decoration: underline ;   
+    font-weight: bold;
+    /* Set font size */
+}
+
+.footer p {
+    margin: 0;
+}
+
+        /* General Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0e5f1;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: white;
+            color: #1d3e8a;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #1d3e8a;
+        }
+
+        .navbar .company-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1d3e8a;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #1d3e8a;
+            font-size: 18px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-weight: bold;
+            white-space: nowrap;
+            display: inline-block;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #1d3e8a;
+            color: white;
+        }
+
+        /* Newsletter Item Styling */
+          .newsletter-item {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+  }
+
+        .newsletter-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #3d52a0;
+        }
+
+        .newsletter-date {
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .newsletter-content {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .newsletter-content img {
+            width: 170px;
+            height: 172px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .newsletter-text {
+            flex: 1;
+            font-size: 1em;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 18px;
+            background-color: #1e88e5;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 6px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(30, 136, 229, 0.2);
+            transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #1565c0;
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(21, 101, 192, 0.3);
+        }
+
+        .social-media-buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-media-buttons a {
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #333;
+            color: white;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .social-media-buttons a:hover {
+            background-color: #555;
+        }
+        .navbar ul li a.active {
+    background-color: #1d3e8a; /* Active background color */
+    color: white; /* Text color for active link */
+    font-weight: bold; /* Optional */
+} /* Navbar Icons */
+        .icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .icons i {
+            font-size: 24px;
+            cursor: pointer;
+            color: #1d3e8a;
+        }
+
+        /* Notification Dot */
+        #notificationDot {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+            border: 2px solid white;
+            z-index: 999;
+        }
+
+        .account-dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .account-dropdown ul {
+            display: none;
+            position: absolute;
+            right: 0;
+            background: #0056b3;
+            border: 1px solid #ccc;
+            list-style: none;
+            padding: 10px;
+            margin-top: 5px;
+            width: 150px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+
+        .account-dropdown ul li {
+            padding: 5px 10px;
+        }
+
+        .account-dropdown ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Dropdown show/hide */
+        .account-dropdown.active ul {
+            display: block;
+        }
+        .content-container {
+    margin: 20px;
+padding: 20px;
+background-color: white;
+border: 1px solid #ddd;
+border-radius: 5px;
+border: 1px solid black;
+}
+    </style>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const currentPath = window.location.pathname.split("/").pop();  // Get the current page's name
+        const navLinks = document.querySelectorAll(".navbar ul li a");
+
+        navLinks.forEach(link => {
+            // If the link href matches the current page, add the "active" class
+            if (link.href.includes(currentPath)) {
+                link.classList.add("active");
+            }
+        });
+    });
+</script>
+</head>
+<body>
+<div class="footer">
+    <p>For Educational Purpose Website</p>
+</div>
+    <!-- Navbar Content -->
+    <div class="navbar">
+        <div class="company-name">ShieldWise</div> <!-- Company name on the left -->
+        <ul>
+            <li><a href="AboutUs.aspx">About Us</a></li>
+            <li><a href="ScanLinks.aspx">Scan Links</a></li>
+            <li><a href="TrustedWebsite.aspx">Trusted Website</a></li>
+<li><a href="index.html" class="active">Newsletter</a></li>
+            <li><a href="PaymentTraining.aspx">Payment Training</a></li>
+            <li><a href="Support.aspx">Support</a></li>
+        </ul><div class="icons">
+            <!-- Notification Bell -->
+            <div style="position: relative;">
+                <i id="notificationBell" class="fas fa-bell" style="cursor:pointer; margin-right: 15px; font-size: 24px;"></i>
+                <span id="notificationDot"></span>
+            </div>
+            <!-- Account Icon -->
+            <div class="account-dropdown">
+                <i id="accountIcon" class="fas fa-user-circle" style="cursor:pointer;"></i>
+                <ul id="accountMenu">
+                    <li><a href="Settings.aspx">Settings</a></li>
+                    <li><a href="Favourites.aspx">Favourites</a></li>
+                    <li><a href="Bookmarks.aspx">Bookmarks</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+<div class="content-container">
+
+    <h1>Read Our Latest Scam Protection Newsletters & Download the Safety Guide</h1>
+
+    <div class="newsletter-item">
+        <div class="newsletter-title">PayNow Scam Awareness in Singapore</div>
+        <div class="newsletter-date">📅 June 2025</div>
+
+        <div class="newsletter-content">
+            <img src="paynow.jpg" alt="PayNow Scam Image" />
+            <div class="newsletter-text">
+                <p>Scammers are increasingly targeting individuals in Singapore by posing as legitimate sellers on online shopping platforms. They trick users into making payments via PayNow by providing false or misleading information.</p>
+                <p><strong>Be vigilant! Always confirm the seller's details and verify the payment request through trusted means before proceeding.</strong></p>
+                <br />
+                <a href="Paynow Scam Shopping Content and Protection Guide.pdf" class="download-btn" target="_blank">📄 Download Newsletter & Safety Guide</a>
+
+                <!-- Social Media Share Links -->
+                <div class="social-media-buttons">
+                    <a href="https://www.whatsapp.com/" target="_blank">Share on WhatsApp</a>
+                    <a href="https://web.telegram.org/a/" target="_blank">Share on Telegram</a>
+                    <a href="https://www.instagram.com" target="_blank">Share on Instagram</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer Section -->
+<div class="footer">
+    <p>For Educational Purpose Website</p>
+</div>
+
+</body>
+</html>
